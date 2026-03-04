@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyfora | Jejak Kenangan Angkatan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --primary: #4f46e5;
+            --accent: #818cf8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(60px);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            height: 6px;
+        }
+        .hide-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+        }
+        .hide-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="hero-glow top-[-10%] left-[30%]"></div>
+    <div class="hero-glow bottom-[10%] right-[30%]" style="background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between glass-card px-6 py-3 border-none shadow-2xl">
+            <div class="text-xl font-bold tracking-tighter">
+                <span class="text-indigo-500">SKY</span>FORA<span class="text-indigo-400">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#home" class="hover:text-white transition-colors">Beranda</a>
+                <a href="#legacy" class="hover:text-white transition-colors">Filosofi</a>
+                <a href="#achievements" class="hover:text-white transition-colors">Prestasi</a>
+                <a href="#gallery" class="hover:text-white transition-colors">Galeri</a>
+            </div>
+            <div class="w-24 md:block hidden text-right">
+                <i class="fas fa-ellipsis-h text-gray-500"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-40 pb-20 px-6 flex flex-col items-center text-center">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-block px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-indigo-400 mb-6 border-indigo-500/20">
+                ✨ Menjaga Api Kenangan Tetap Menyala
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                Keluarga Besar <br><span class="text-gradient">Skyfora</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Tempat di mana mimpi dimulai dan persahabatan abadi terjalin. Kami adalah lebih dari sekadar angkatan; kami adalah sejarah yang terus hidup.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <a href="#gallery" class="w-full md:w-auto px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-200 transition-all flex items-center justify-center group">
+                    Buka Memori
+                    <i class="fas fa-camera ml-2 group-hover:rotate-12 transition-transform"></i>
+                </a>
+                <a href="#achievements" class="w-full md:w-auto px-8 py-4 glass-card font-semibold hover:bg-white/10 transition-all flex items-center justify-center">
+                    <i class="fas fa-trophy mr-2 text-amber-400"></i> Lihat Prestasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (Centered) -->
+    <section class="py-10 px-6">
+        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass-card p-6 text-center">
+                <div class="text-3xl font-bold text-gradient mb-1">2024</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest">Lulus</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+                <div class="text-3xl font-bold text-gradient mb-1">150+</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest">Anggota</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+                <div class="text-3xl font-bold text-gradient mb-1">∞</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest">Cerita</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+                <div class="text-3xl font-bold text-gradient mb-1">Solid</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest">Koneksi</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofi Section (Centered Content) -->
+    <section id="legacy" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-4">Pilar <span class="text-indigo-400">Kekuatan Kami</span></h2>
+                <p class="text-gray-400 max-w-lg mx-auto">Nilai-nilai yang kami bawa dari masa lalu untuk menerangi masa depan bersama Skyfora.</p>
+            </div>
+
